@@ -107,7 +107,7 @@ El ESP32 utiliza una **matriz de GPIO (GPIO Matrix)** que permite reasignar por 
 
 **Diagrama de pinout de referencia (placa de desarrollo ESP32-WROOM-32, 38 pines):**
 
-![Pinout ESP32-WROOM-32](img/esp32-pinout.jpg)
+![Pinout ESP32-WROOM-32](img/ESP32-pinout.jpg)
 
 > Fuente de la imagen: [descubrearduino.com](https://descubrearduino.com/wp-content/uploads/2020/06/ESP32-pinout.jpg). Se usa aquí con fines educativos, con crédito al autor original.
 
