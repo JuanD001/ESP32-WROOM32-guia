@@ -1,6 +1,6 @@
 # Ejemplo en C (ESP-IDF / FreeRTOS) — Demostración de IPC
 
-Archivo: [`ipc_demo.c`](./CODIGO.c)
+Archivo: [`CODIGO.c`](./CODIGO.c)
 
 Programa original en C sobre ESP-IDF que usa **FreeRTOS** para coordinar cuatro tareas concurrentes:
 
