@@ -14,7 +14,8 @@ Repositorio de documentación y proyectos sobre el módulo **ESP32-WROOM-32**, d
 6. [PWM (modulación por ancho de pulso)](#pwm-modulación-por-ancho-de-pulso)
 7. [DAC (conversor digital-analógico)](#dac-conversor-digital-analógico)
 8. [Programación en C vs. MicroPython](#programación-en-c-vs-micropython)
-9. [Recursos y referencias](#recursos-y-referencias)
+9. [Ejemplos de código](#ejemplos-de-código)
+10. [Recursos y referencias](#recursos-y-referencias)
 
 ---
 
@@ -107,9 +108,11 @@ El ESP32 utiliza una **matriz de GPIO (GPIO Matrix)** que permite reasignar por 
 
 **Diagrama de pinout de referencia (placa de desarrollo ESP32-WROOM-32, 38 pines):**
 
-![Pinout ESP32-WROOM-32](img/ESP32-pinout.jpg)
+![Pinout ESP32-WROOM-32](img/esp32-pinout.jpg)
 
 > Fuente de la imagen: [descubrearduino.com](https://descubrearduino.com/wp-content/uploads/2020/06/ESP32-pinout.jpg). Se usa aquí con fines educativos, con crédito al autor original.
+>
+> Para que la imagen se muestre correctamente, descárgala y colócala en tu repositorio en la ruta `img/esp32-pinout.jpg`.
 
 Puntos clave a tener en cuenta al conectar la placa:
 
@@ -207,6 +210,21 @@ La ESP32 puede programarse principalmente de dos formas: en **C/C++** (usando el
 | Consumo de RAM | Bajo | Más alto |
 | Control de hardware | Total | Limitado |
 | Ideal para | Proyectos de producción, tiempo real, bajo consumo | Prototipado, aprendizaje, proyectos educativos |
+
+---
+
+## Ejemplos de código
+
+El repositorio incluye un proyecto de ejemplo (control de dos LEDs mediante interrupciones de botón, con una tarea productora/consumidora comunicadas por una cola) implementado en ambos lenguajes, para comparar en la práctica lo descrito en la sección anterior:
+
+| Lenguaje | Carpeta | Simulación online | Descripción |
+|---|---|---|---|
+| C (ESP-IDF / FreeRTOS) | [`src/c/`](src/c/) | [Wokwi ↗](https://wokwi.com/projects/471963365838170113) | Versión original con tareas, colas y semáforos nativos de FreeRTOS |
+| MicroPython | [`src/micropython/`](src/micropython/) | [Wokwi ↗](https://wokwi.com/projects/473197046830440449) | Versión equivalente, con explicación detallada del código en su propio `README.md` |
+
+Ambas versiones comparten el mismo circuito (dos botones en GPIO13/GPIO14, dos LEDs con resistencia en GPIO25/GPIO26):
+
+![Circuito ESP32 con botones y LEDs](img/wokwi-circuito-botones-leds.png)
 
 ---
 
