@@ -1,8 +1,8 @@
 # Ejemplo MicroPython — Demostración de IPC (botones, LEDs y cola productor/consumidor)
 
-Archivo: [`ipc_demo.py`](./ipc_demo.py)
+Archivo: [`CODIGO.py`](./CODIGO.py)
 
-Este ejemplo es la **versión en MicroPython** del programa original escrito en C con ESP-IDF/FreeRTOS que se encuentra en [`../c/ipc_demo.c`](../c/ipc_demo.c). Reproduce el mismo comportamiento: dos botones controlan dos LEDs mediante interrupciones, mientras un hilo "productor" genera datos y un hilo "consumidor" los procesa a través de una cola compartida.
+Este ejemplo es la **versión en MicroPython** del programa original escrito en C con ESP-IDF/FreeRTOS que se encuentra en [`../c/CODIGO.c`](../c/CODIGO.c). Reproduce el mismo comportamiento: dos botones controlan dos LEDs mediante interrupciones, mientras un hilo "productor" genera datos y un hilo "consumidor" los procesa a través de una cola compartida.
 
 ## Conexiones de hardware
 
@@ -156,6 +156,6 @@ Lanza el productor y el consumidor cada uno en su propio hilo (usando el segundo
 ## Cómo ejecutarlo
 
 1. Flashea el firmware de MicroPython en tu ESP32-WROOM-32 (ver la sección de referencias del README principal del repositorio).
-2. Sube este archivo (`ipc_demo.py`) a la placa, por ejemplo con **Thonny**, **ampy** o **rshell**.
+2. Sube este archivo (`CODIGO.py`) a la placa, por ejemplo con **Thonny**, **ampy** o **rshell**.
 3. Ejecútalo o renómbralo como `main.py` para que corra automáticamente al iniciar la placa.
 4. Abre el monitor serie para ver los mensajes de `[PRODUCER]`, `[CONSUMER]` y `[BUTTON]`.
